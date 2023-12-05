@@ -1,0 +1,142 @@
+:root{
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-primary: hsl(292, 42%, 14%);
+    --clr-secondary: hsl(275, 100%, 97%);
+    --clr-accent: hsl(292, 16%, 49%);
+}
+
+/* TYPOGRAPHY */
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    font-family: "Work Sans", sans-serif;
+    justify-content: center;
+    background: var(--clr-secondary);
+    background-image: url(/faq-accordion-main/assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 375px) {
+    body{
+        background-image: url(/faq-accordion-main/assets/images/background-pattern-mobile.svg);
+       
+    }
+}
+
+p{
+    font-size: 1.6rem;
+    color: var(--clr-accent);
+}
+
+li{
+    list-style: none;
+}
+
+
+/* Main */
+#main{
+    max-width: 50%;
+}
+
+@media screen and (max-width: 375px) {
+    #main{
+        max-width: 90%;
+    }
+}
+
+/* FAQ */
+.faq-container{
+    display: block;
+    padding: 20px;
+    box-shadow: 0 0 3.5rem rgb(0 0 0 / 0.1);
+    border-radius: 2rem;
+    justify-content: space-between;
+    overflow: hidden;
+    background: var(--clr-neutral-white);
+    margin-block: 15rem;
+}
+
+.faq-list{
+    padding: 1rem 1rem 0;    
+}
+
+@media screen and (max-width: 375px){
+    .faq-container{
+        padding: 1px;
+        margin-block: 10rem;
+
+    }
+
+    .faq-list{
+        padding: 1.5rem 1.5rem 0;
+    }
+}
+
+.faq__title{
+    font-size: 5rem;
+
+}
+.star{
+    margin-left: 4rem;
+}
+
+.collapsible-icon{
+    cursor: pointer;
+}
+
+.faq__heading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-description{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 200ms ease-out;
+}
+
+.faq-content{
+    border-bottom: 1px solid rgb(245, 245, 245);
+}
+
+/* COLLAPSIBLE */
+
+.collapsible__icon{
+    cursor: pointer;
+    /* transform: rotate(90deg); */
+    background: url('/faq-accordion-main/assets/images/icon-plus.svg') no-repeat;
+    transition: transform .2s ease-out;
+}
+
+
+.content--expanded .collapsible__icon{
+    transform: rotate(0);
+}
+
+.content--expanded .collapsible__icon::after{
+    content: '\02795';
+    display: inline-block;
+    /* background: url('/faq-accordion-main/assets/images/icon-plus.svg') no-repeat; */
+}
+
+.active::after{
+    content: \2796;
+    background: url('/faq-accordion-main/assets/images/icon-minus.svg');
+}
+
+.content--expanded .faq-description{
+    display: block;
+    max-height: 100vh;
+    opacity: 1;
+}
+
+.star:hover{
+    rotate: 10deg;
+    transition: rotate 200ms ease-in-out;
+}

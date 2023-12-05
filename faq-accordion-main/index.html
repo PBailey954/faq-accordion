@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Inter:wght@400;700&family=Roboto+Mono&family=Roboto:wght@300;400;900&family=Work+Sans:ital,wght@0,400;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | FAQ accordion</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main id="main">
+      <div class="faq-container">
+        <div class="faq-content collapsible content--collapsed">
+          <h1 class="faq__title">
+            <!-- Star Icon -->
+            <img class="star" src="./assets/images/icon-star.svg" />
+            FAQs
+          </h1>
+          <ul class="faq-list">
+            <li class="faq-item">
+              <h2 class="faq__heading">
+                What is Frontend Mentor, and how will it help me?
+                <!-- collapsible icon below -->
+                <img
+                  class="collapsible-icon"
+                  aria-hidden="true"
+                  src="./assets/images/icon-plus.svg"
+                />
+              </h2>
+              <p class="faq-description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur minima deleniti esse alias repellendus molestiae
+                laudantium earum enim praesentium fugit?
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="faq-content collapsible content--collapsed">
+          <ul class="faq-list">
+            <li class="faq-item">
+              <h2 class="faq__heading">
+                Is Frontend mentor free?
+                <!-- Collapsible icon below -->
+                <img
+                  class="collapsible-icon"
+                  aria-hidden="true"
+                  src="./assets/images/icon-plus.svg"
+                />
+              </h2>
+              <p class="faq-description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur minima deleniti esse alias repellendus molestiae
+                laudantium earum enim praesentium fugit?
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="faq-content collapsible content--collapsed">
+          <ul class="faq-list">
+            <li class="faq-item">
+              <h2 class="faq__heading">
+                Can i use Frontend Mentor projects in my portfolio?
+                <!-- Collapsible icon below -->
+                <img
+                  class="collapsible-icon"
+                  aria-hidden="true"
+                  src="./assets/images/icon-plus.svg"
+                />
+              </h2>
+              <p class="faq-description">
+                Definitely! Please do feel free to use whatever you build in
+                your portfolio. Helping developers add professional-looking
+                projects to their portfolio was one of the reasons we created
+                this platform!
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="faq-content collapsible content--collapsed">
+          <ul class="faq-list">
+            <li class="faq-item">
+              <h2 class="faq__heading">
+                How can i get help if i'm stuck on a challenge?
+                <!-- Collapsible icon below -->
+                <img
+                  class="collapsible-icon"
+                  aria-hidden="true"
+                  src="./assets/images/icon-plus.svg"
+                />
+              </h2>
+              <p class="faq-description">
+                The best (and quickest) way to get help on a challenge is in our
+                Discord server. There are thousands of other developers in
+                there, so it's a great place to ask questions. We even have a
+                dedicated "help" channel! If you haven't joined yet, you can get
+                an invite to our Discord server here.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
